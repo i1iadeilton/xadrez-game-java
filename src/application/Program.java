@@ -1,13 +1,14 @@
 package application;
 
-import boardgame.Board;
+import chess.ChessMatch;
 
 public class Program {
 
 	public static void main(String[] args) {
 
-		Board board = new Board(3, 2);
-
+		ChessMatch chessMatch = new ChessMatch();
+		//metodo para imprimir o tabuleito
+		UI.printBoard(chessMatch.getPieces());
 	}
 
 }

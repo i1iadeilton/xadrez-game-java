@@ -13,7 +13,7 @@ public class UI {
 			/*quebra de linha do tabuleiro*/
 			System.out.println();
 		}
-		System.out.println(" a b c d e f g h");
+		System.out.println("  a b c d e f g h");
 	}
 	
 	/*metodo auxiliar para imprimir uma peça*/

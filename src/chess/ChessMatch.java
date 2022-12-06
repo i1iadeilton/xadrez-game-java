@@ -2,6 +2,10 @@ package chess;
 
 import boardgame.Board;
 
+import boardgame.Position;
+import chess.pieces.King;
+import chess.pieces.Rook;
+
 public class ChessMatch {
 
 	private Board board;
@@ -9,6 +13,7 @@ public class ChessMatch {
 	public ChessMatch() {
 		/*classe responsável pelas dimensões do tabuleiro*/
 		board = new Board(8, 8);
+		inicialSetup(); 
 	}
 	
 	/*[ camada de chess ->Peças do xadrez] != [ camada de board -> peças tabuleiro]*/
@@ -22,5 +27,10 @@ public class ChessMatch {
 			}
 		}
 		return matriz;
+	}
+	
+	private void inicialSetup() {
+		board.placePiece(new Rook(board, Color.WHITE), new Position(2, 1));
+		board.placePiece(new King(board, Color.WHITE), new Position(0, 4));
 	}
 }

@@ -15,4 +15,10 @@ public class Rook extends ChessPiece {
 		return "R";
 	}
 
+	@Override
+	public boolean[][] possibleMove() {
+		/*por padrão todas posições da matriz começam com false, como se a peça tivesse presa*/
+		boolean[][] matriz = new boolean[getBoard().getRows()][getBoard().getColumns()];
+		return matriz;
+	}
 }

@@ -13,7 +13,7 @@ public class ChessMatch {
 	public ChessMatch() {
 		/*classe responsável pelas dimensões do tabuleiro*/
 		board = new Board(8, 8);
-		inicialSetup(); 
+		inicialSetup();
 	}
 	
 	/*[ camada de chess ->Peças do xadrez] != [ camada de board -> peças tabuleiro]*/

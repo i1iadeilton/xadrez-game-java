@@ -30,6 +30,14 @@ public class ChessMatch {
 		return matriz;
 	}
 	
+	/*Metodo para imprimir os possiveis movimentos de um peça: para isso vai ser necessário
+	 na class Program declarar uma matriz boolean para receber esse metodo*/
+	public boolean[][] possibleMoves(ChessPosition sourcePosition){
+		Position position = sourcePosition.toPosition();
+		validateSourcePosition(position);
+		return board.piece(position).possibleMove();		
+	}
+	
 	public ChessPiece performChessMove(ChessPosition sourcePosition, ChessPosition targetPosition) {
 		/*passando sorce e targetPosition para posições da matriz*/
 		Position source = sourcePosition.toPosition();
@@ -37,8 +45,8 @@ public class ChessMatch {
 		/*Antes: validar se tinha uma peça na posição*/
 		validateSourcePosition(source);
 		validateTargetPosition(source, target);
-		Piece capturePiece = makeMove(source, target);
-		return (ChessPiece)capturePiece;
+		Piece capturedPiece = makeMove(source, target);
+		return (ChessPiece)capturedPiece;
 	}
 	
 	private Piece makeMove(Position source, Position target) {

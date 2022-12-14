@@ -43,7 +43,7 @@ public class Program {
 			}
 			catch(ChessException e) {
 				System.out.println(e.getMessage());
-				/*nextLine para aguardar o enter*/
+				//nextLine para aguardar o enter
 				sc.nextLine();
 			}
 			catch(InputMismatchException e ) {
